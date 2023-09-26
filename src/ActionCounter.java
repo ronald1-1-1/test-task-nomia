@@ -27,11 +27,6 @@ class ActionCounter {
     }
 
     private void update(int timestamp) {
-        if (lastTime == -1) {
-            lastTime = timestamp;
-            return;
-        }
-
         int difference = timestamp - lastTime;
         lastTime = timestamp;
         if (difference > TIME_BEFORE) {
